@@ -37,3 +37,28 @@ function applyUpdateOperation(obj, key, value) {
     applyObjectUpdate(current, lastKey, value);
   }
 }
+
+// function "applyArrayUpdate", um Arrays upzudaten
+function applyArrayUpdate(arr, key, value) {
+  if (key === "[]") {
+    // if Schlüssel [] ist, füge ich einen neuen Eintrag zum Array hinzu oder entferne das gesamte Array
+    if (value === null) {
+      arr.length = 0;
+    } else {
+      arr.push(value);
+    }
+  } else {
+    // else suche ich den Eintrag im Array und wende das Update an
+    const index = arr.findIndex((item) => item._id === key);
+    if (index !== -1) {
+      if (value === null) {
+        arr.splice(index, 1);
+      } else {
+        arr[index] = Object.assign({}, arr[index], value);
+      }
+    }
+  }
+}
+
+// function "applyObjectUpdate", um Objects upzudaten
+function applyObjectUpdate(arr, key, value) {}

@@ -25,3 +25,7 @@ Die Hauptfunktion applyUpdate durchläuft jedes Update im update-Objekt und wend
 2. Funktion applyUpdateOperation
 
 Die Funktion applyUpdateOperation wird aufgerufen, um spezifische Updates auf das Objekt anzuwenden. Sie teilt den Schlüssel an den Punkten auf, um den Pfad zum Zielobjekt oder -array zu bestimmen, und führt dann die entsprechende Update-Operation aus.
+
+3. Funktionen applyArrayUpdate und applyObjectUpdate
+
+Die Funktionen applyArrayUpdate und applyObjectUpdate werden aufgerufen, um Updates auf Arrays bzw. Objekten durchzuführen. Sie verarbeiten die Updates entsprechend und passen das Zielobjekt oder -array entsprechend an.
