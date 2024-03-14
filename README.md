@@ -4,7 +4,7 @@ Lösung für das Backend-Codierungsproblem von Hokify
 
 Um das Backend-Codierungsproblem von Hokify zu lösen, werde ich eine JavaScript-Funktion erstellen, die die angegebenen Update/Änderungsoperationen auf einem vorhandenen Objekt ausführt. Die Funktion wird alle Fälle abdecken, wie sie in den Spezifikationen beschrieben sind, und die entsprechenden Tests bestehen.
 
-function applyUpdate(obj, update)
+-- function applyUpdate(obj, update)
 
 Gedanken zur Lösung:
 
@@ -17,3 +17,11 @@ Gedanken zur Lösung:
     4.Ich werde auch sicherstellen, dass das _id-Attribut bei der Aktualisierung von Array-Einträgen beibehalten wird.
 
     5.Die Funktion wird Tests bestehen, um sicherzustellen, dass sie wie erwartet funktioniert.
+
+1. Funktion applyUpdate
+
+Die Hauptfunktion applyUpdate durchläuft jedes Update im update-Objekt und wendet die entsprechende Update-Operation an. Die Funktion gibt das aktualisierte Objekt zurück.
+
+2. Funktion applyUpdateOperation
+
+Die Funktion applyUpdateOperation wird aufgerufen, um spezifische Updates auf das Objekt anzuwenden. Sie teilt den Schlüssel an den Punkten auf, um den Pfad zum Zielobjekt oder -array zu bestimmen, und führt dann die entsprechende Update-Operation aus.
