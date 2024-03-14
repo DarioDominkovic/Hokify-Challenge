@@ -61,4 +61,12 @@ function applyArrayUpdate(arr, key, value) {
 }
 
 // function "applyObjectUpdate", um Objects upzudaten
-function applyObjectUpdate(arr, key, value) {}
+function applyObjectUpdate(arr, key, value) {
+  if (value === null) {
+    // if Wert null ist, entferne ich die Eigenschaft aus dem Objekt
+    delete obj[key];
+  } else {
+    // else setze oder update ich die Eigenschaft im objekt
+    obj[key] = value;
+  }
+}
