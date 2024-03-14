@@ -29,3 +29,7 @@ Die Funktion applyUpdateOperation wird aufgerufen, um spezifische Updates auf da
 3. Funktionen applyArrayUpdate und applyObjectUpdate
 
 Die Funktionen applyArrayUpdate und applyObjectUpdate werden aufgerufen, um Updates auf Arrays bzw. Objekten durchzuführen. Sie verarbeiten die Updates entsprechend und passen das Zielobjekt oder -array entsprechend an.
+
+Beispielanwendung
+
+Ein Beispielobjekt obj und ein Set von Updates updates wurden bereitgestellt, um die Funktionalität der Implementierung zu demonstrieren. Die Updates umfassen verschiedene Arten von Änderungen, wie das Hinzufügen, Aktualisieren und Entfernen von Einträgen im Objekt.

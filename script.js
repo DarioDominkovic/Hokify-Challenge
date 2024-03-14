@@ -61,7 +61,7 @@ function applyArrayUpdate(arr, key, value) {
 }
 
 // function "applyObjectUpdate", um Objects upzudaten
-function applyObjectUpdate(arr, key, value) {
+function applyObjectUpdate(obj, key, value) {
   if (value === null) {
     // if Wert null ist, entferne ich die Eigenschaft aus dem Objekt
     delete obj[key];
@@ -70,3 +70,40 @@ function applyObjectUpdate(arr, key, value) {
     obj[key] = value;
   }
 }
+
+// Beispielobjekt und Updates hinzugefügt
+let obj = {
+  a: {
+    b: [
+      { _id: "5dc0ad700000000000000000", name: "asdf1" },
+      { _id: "5dc0ad700000000000000001", name: "asdf2" },
+      { _id: "5dc0ad700000000000000002", name: "asdf3" },
+    ],
+  },
+  value: "hui",
+};
+
+const updates = {
+  "a.b[5dc0ad700000000000000000]": { title: "asdf1-updated" },
+  "a.b[5dc0ad700000000000000000].titleValue": "asdf1-updated",
+  "a.b[]": { _id: "5dc0ad700000000000000003", name: "co2" },
+  "a.b[5dc0ad700000000000000001]": null,
+  "a.c": "hallo",
+  value: null,
+  something: "anything",
+  "v.x[]": "asdfV",
+  "v.m.l": "asdf-val",
+  images: {
+    thumbnail: "http://new-thumbnail.jpg",
+    small: "http://new-small.jpg",
+    medium: "http://new-medium.jpg",
+    large: "http://new-large.jpg",
+    xlarge: "http://new-xlarge.jpg",
+  },
+};
+
+// function aufrufen, um updates anzuwenden
+applyUpdate(obj, updates);
+
+// ergebnis ausgeben und überprüfen
+console.log(obj);
